@@ -9,7 +9,6 @@ const AuthCallbackPage = () => {
   const { createUser } = useCreateMyUser();
 
   const hasCreatedUser = useRef(false);
-  // useRef here is not changed, and useEffect will render once
 
   useEffect(() => {
     if (user?.sub && user?.email && !hasCreatedUser.current) {
